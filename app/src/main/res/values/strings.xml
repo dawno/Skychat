@@ -15,4 +15,5 @@
     <string name="contact_num">Contact no</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_profile">Hello world!</string>
 </resources>

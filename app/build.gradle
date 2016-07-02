@@ -27,10 +27,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.0'
     compile files('C:/Users/dell pc/AndroidStudioProjects/Skychat/libs/classes.jar')
     compile files('C:/Users/dell pc/AndroidStudioProjects/Skychat/libs/gradle-wrapper.jar')
-    compile files('C:/Users/dell pc/Documents/GitHub/Skychat/libs/glide-3.7.0-javadoc.jar')
-    compile files('C:/Users/dell pc/Documents/GitHub/Skychat/libs/glide-3.6.0.jar')
     compile files('C:/Users/dell pc/Documents/GitHub/Skychat/libs/volley.jar')
-    compile files('C:/Users/dell pc/Documents/GitHub/Skychat/libs/rxjava-1.1.6.jar')
-    compile files('C:/Users/dell pc/Documents/GitHub/Skychat/libs/library-1.1.7-javadoc.jar')
-    compile files('C:/Users/dell pc/Documents/GitHub/Skychat/libs/library-1.1.7-sources (1).jar')
+
 }
