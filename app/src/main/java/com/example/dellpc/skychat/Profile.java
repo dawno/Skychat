@@ -40,58 +40,14 @@ import java.util.Hashtable;
 import java.util.Map;
 
 public class Profile extends Activity {
-    Bitmap bitmap;
-    Bitmap bitmapcir;
-    ImageView profilepic;
-    ImageView cam;
-    Button button;
-    TextView name;
-    TextView contactnum;
-    ArrayList results;
-
-    private String UPLOAD_URL ="http://skywalker.org.in/uploads.php";
-    private int PICK_IMAGE_REQUEST = 1;
-
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new MyRecyclerViewAdapter(getDataSet());
-        mRecyclerView.setAdapter(mAdapter);
-        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-     
-    }
 
-
-
-    public ArrayList<DataObject> getDataSet() {
-    results = new ArrayList<DataObject>();
-        SharedPreferences prefs1 = getSharedPreferences("bio", MODE_PRIVATE);
-        String contact_num = prefs1.getString("contact_num", null);
-        String name = prefs1.getString("email",null);
-        String email =  prefs1.getString("name",null);
-        DataObject obj = new DataObject("Name",name);
-        results.add(obj);
-        obj = new DataObject("Email",email);
-        results.add(obj);
-        obj = new DataObject("Contact Number",contact_num);
-        results.add(obj);
-
-        return results;
 
     }
-
 }
-
 

@@ -15,7 +15,4 @@
     <string name="contact_num">Contact no</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_profile">Profile</string>
-    <string name="second_activity_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur diam id aliquam scelerisque. Donec ultrices lacus vel dignissim pharetra. Vivamus pharetra augue quis rhoncus placerat. Sed ultricies at risus non cursus. Nam rutrum leo nec placerat consectetur. Vestibulum feugiat eleifend diam, nec interdum augue tincidunt sit amet. Praesent feugiat est auctor lacus consectetur, vitae pellentesque dolor laoreet.</string>
-    <string name="title_activity_second">SecondActivity</string>
 </resources>
