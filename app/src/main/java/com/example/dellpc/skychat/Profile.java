@@ -1,9 +1,13 @@
 package com.example.dellpc.skychat;
 
+import android.app.ActionBar;
 import android.app.ProgressDialog;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import android.app.Activity;
@@ -25,16 +29,19 @@ import org.json.JSONObject;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
-public class Profile extends Activity {
+public class Profile extends ActionBarActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     // Movies json url
-    private static final String url = "www.skywalker.org.in/Bio.php";
+    private static final String url = "http://skywalker.org.in/profileimage.php";
     private ProgressDialog pDialog;
     private List<Bio> movieList = new ArrayList<Bio>();
     private ListView listView;
@@ -45,7 +52,6 @@ public class Profile extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
 
 
         listView = (ListView) findViewById(R.id.list);
@@ -70,7 +76,7 @@ public class Profile extends Activity {
                             try {
 
                                 JSONObject obj = response.getJSONObject(i);
-                                movie = new Bio(title, thumbnailUrl,status);
+                                movie = new Bio(title, thumbnailUrl, status);
 
                                 movie.setTitle(obj.getString("title"));
                                 movie.setThumbnailUrl(obj.getString("image"));
@@ -101,13 +107,22 @@ public class Profile extends Activity {
 
         // Adding request to request queue
         AppController.getInstance().addToRequestQueue(movieReq);
-    }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        hidePDialog();
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent in = new Intent(Profile.this,Chatting.class);
+                startActivity(in);
+
+            }
+        });
+
     }
+        @Override
+        public void onDestroy () {
+            super.onDestroy();
+            hidePDialog();
+        }
 
     private void hidePDialog() {
         if (pDialog != null) {
@@ -118,6 +133,8 @@ public class Profile extends Activity {
 
 
 }
+
+
 
 
 

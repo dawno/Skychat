@@ -66,14 +66,14 @@ public class CustomListAdapter extends BaseAdapter {
         title.setText(m.getTitle());
 
         // rating
-      status.setText("Rating: " + String.valueOf(m.getStatus()));
-
-
-
-
-
+      status.setText("Status: " + String.valueOf(m.getStatus()));
 
         return convertView;
     }
+
+
+
+
+
 
 }

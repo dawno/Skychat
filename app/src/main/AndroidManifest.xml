@@ -28,7 +28,10 @@
             android:name=".Profile"
             android:label="@string/title_activity_profile" >
         </activity>
-
+        <activity
+            android:name=".Chatting"
+            android:label="@string/title_activity_chatting" >
+        </activity>
     </application>
 
 </manifest>

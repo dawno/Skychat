@@ -15,5 +15,9 @@
     <string name="contact_num">Contact no</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_profile">Hello world!</string>
+    <string name="title_activity_profile">SKYCHAT</string>
+    <string name="title_activity_chatting">Chatting</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="btn_join">JOIN</string>
+    <string name="btn_send">Send</string>
 </resources>

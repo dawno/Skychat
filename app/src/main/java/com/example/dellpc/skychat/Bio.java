@@ -12,11 +12,11 @@ public class Bio {
     private ArrayList<String> genre;
 
 
-    public Bio(String name, String thumbnailUrl,  String rating) {
+    public Bio(String name, String thumbnailUrl,  String status) {
         this.title = name;
         this.thumbnailUrl = thumbnailUrl;
 
-        this.status = rating;
+        this.status = status;
 
     }
 
