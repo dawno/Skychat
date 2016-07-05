@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
@@ -17,6 +18,7 @@ import android.app.Activity;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -30,8 +32,10 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -46,14 +50,18 @@ public class Profile extends ActionBarActivity {
     private List<Bio> movieList = new ArrayList<Bio>();
     private ListView listView;
     private CustomListAdapter adapter;
+  String name[] ;
     Bio movie;
+    Toolbar mActionBarToolbar;
     private String title, thumbnailUrl,status;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
-
+        mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mActionBarToolbar.setTitle("Users");
+        setSupportActionBar(mActionBarToolbar);
+name = new String[10000];
         listView = (ListView) findViewById(R.id.list);
         adapter = new CustomListAdapter(this, movieList);
         listView.setAdapter(adapter);
@@ -82,7 +90,7 @@ public class Profile extends ActionBarActivity {
                                 movie.setThumbnailUrl(obj.getString("image"));
                                 movie.setStatus(obj.getString("status"));
 
-
+                                 name[i] = obj.getString("title");
                                 // adding movie to movies array
                                 movieList.add(movie);
 
@@ -112,7 +120,12 @@ public class Profile extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent in = new Intent(Profile.this,Chatting.class);
+
+String value =  name[position];
+
+              in.putExtra("name",value);
                 startActivity(in);
+
 
             }
         });

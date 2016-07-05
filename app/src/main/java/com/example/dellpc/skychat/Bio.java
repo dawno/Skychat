@@ -9,7 +9,7 @@ public class Bio {
     private String title, thumbnailUrl,status;
 
 
-    private ArrayList<String> genre;
+
 
 
     public Bio(String name, String thumbnailUrl,  String status) {
