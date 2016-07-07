@@ -1,6 +1,5 @@
 package com.example.dellpc.skychat;
 
-
 import java.util.List;
 
 import android.annotation.SuppressLint;
@@ -12,12 +11,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
- class MessageListAdapter extends BaseAdapter {
+public class MessagesListAdapte extends BaseAdapter {
 
     private Context context;
     private List<Message> messagesItems;
 
-    public MessageListAdapter(Context context, List<Message> navDrawerItems) {
+    public MessagesListAdapte(Context context, List<Message> navDrawerItems) {
         this.context = context;
         this.messagesItems = navDrawerItems;
     }
@@ -37,14 +36,11 @@ import android.widget.TextView;
         return position;
     }
 
-
+    @SuppressLint("InflateParams")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        /**
-         * The following list not implemented reusable list items as list items
-         * are showing incorrect data Add the solution if you have one
-         * */
+
 
         Message m = messagesItems.get(position);
 
@@ -52,7 +48,7 @@ import android.widget.TextView;
                 .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
 
         // Identifying the message owner
-        if (messagesItems.get(position).isSelf()) {
+        if (messagesItems.get(position).isSelf()=="1" ) {
             // message belongs to you, so load the right aligned layout
             convertView = mInflater.inflate(R.layout.list_item_message_right,
                     null);

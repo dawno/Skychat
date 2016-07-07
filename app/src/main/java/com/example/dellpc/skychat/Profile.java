@@ -42,7 +42,7 @@ import android.widget.Toast;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 public class Profile extends ActionBarActivity {
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = Profile.class.getSimpleName();
 
     // Movies json url
     private static final String url = "http://skywalker.org.in/profileimage.php";
