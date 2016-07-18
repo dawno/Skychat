@@ -61,7 +61,7 @@ public class Profile extends ActionBarActivity {
         mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar);
         mActionBarToolbar.setTitle("Users");
         setSupportActionBar(mActionBarToolbar);
-name = new String[10000];
+        name = new String[100000];
         listView = (ListView) findViewById(R.id.list);
         adapter = new CustomListAdapter(this, movieList);
         listView.setAdapter(adapter);

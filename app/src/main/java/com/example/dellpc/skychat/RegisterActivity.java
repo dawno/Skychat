@@ -126,15 +126,15 @@ public class RegisterActivity extends Activity {
                         String number = user.getString("contact_num");
                         //String created_at = user.getString("created_at");
 
-                        SharedPreferences prefs1 = getSharedPreferences("bio", MODE_PRIVATE);
+                      //  SharedPreferences prefs1 = getSharedPreferences("bio", MODE_PRIVATE);
                       //  SharedPreferences.Editor contact_num = prefs1.edit();
-                        SharedPreferences.Editor uname = prefs1.edit();
+                      //  SharedPreferences.Editor uname = prefs1.edit();
                        // SharedPreferences.Editor ename = prefs1.edit();
                       //  ename.putString("email",email);
-                       uname.putString("name", name);
+                     //  uname.putString("name", name);
                        // contact_num.putString("contact_num", number);
                       //  contact_num.commit();
-                        uname.commit();
+                       // uname.commit();
                     //    ename.commit();
 
                         Toast.makeText(getApplicationContext(), "User successfully registered. Try login now!", Toast.LENGTH_LONG).show();
