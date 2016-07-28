@@ -49,13 +49,15 @@ public class MessagesListAdapte extends BaseAdapter {
 
         // Identifying the message owner
         if (messagesItems.get(position).isSelf()=="1" ) {
-            // message belongs to you, so load the right aligned layout
-            convertView = mInflater.inflate(R.layout.list_item_message_right,
-                    null);
-        } else {
-            // message belongs to other person, load the left aligned layout
             convertView = mInflater.inflate(R.layout.list_item_message_left,
                     null);
+            // message belongs to you, so load the right aligned layout
+
+        } else {
+            // message belongs to other person, load the left aligned layout
+            convertView = mInflater.inflate(R.layout.list_item_message_right,
+                    null);
+
         }
 
         TextView lblFrom = (TextView) convertView.findViewById(R.id.lblMsgFrom);
