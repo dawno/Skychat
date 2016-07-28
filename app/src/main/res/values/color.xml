@@ -14,6 +14,7 @@
     <color name="btn_login_bg">#eceef1</color>
     <color name="lbl_name">#333333</color>
     <color name="btn_logut_bg">#ff6861</color>
+    <color name="colorPrimary">#3F51B5</color>
     <color name="primary">#3F51B5</color>
     <color name="primary_dark">#303F9F</color>
     <color name="accent">#FF4081</color>
@@ -35,5 +36,6 @@
     <color name="bg_btn_join">#1e6258</color>
     <color name="bg_msg_input">#e8e8e8</color>
     <color name="text_msg_input">#626262</color>
+    <color name="bg_bubble_self">#E1E1E1</color>
     <color name="lblFromName">#777777</color>
 </resources>
