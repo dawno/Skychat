@@ -3,6 +3,9 @@ package com.example.dellpc.skychat;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -39,9 +42,19 @@ public class Chatting extends AppCompatActivity {
     String fromName;
     String message;
     private ListView messageView;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
     private List<Message> packList = new ArrayList<>();
     public static final String MyPREFERENCES = "" ;
     MessagesListAdapte adapter;
+=======
+    RecyclerView recyclerView;
+     ArrayList<Message> messageArrayList ;
+    public static final String MyPREFERENCES = "" ;
+  ChatRoomThreadAdapter adapter;
+>>>>>>> origin/master
     String isSelf;
     private static final String TAG = Chatting.class.getSimpleName();
     private static final String url = "http://skywalker.org.in/sendingmessage.php";
@@ -50,16 +63,32 @@ public class Chatting extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatting);
+        messageArrayList = new ArrayList<>();
         final String receiver = getIntent().getStringExtra("name");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
         messageView = (ListView)findViewById(R.id.list_view_messages);
         adapter = new MessagesListAdapte(this, packList);
         messageView.setAdapter(adapter);
         mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar1);
+=======
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+       // messageView = (ListView)findViewById(R.id.list_view_messages);
+        adapter = new ChatRoomThreadAdapter(this,messageArrayList );
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(adapter);
+        //messageView.setAdapter(adapter);
+        mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar);
+>>>>>>> origin/master
         mActionBarToolbar.setTitle(receiver);
         setSupportActionBar(mActionBarToolbar);
 
-        inputmsg = (EditText) findViewById(R.id.inputMsg);
-        send = (Button) findViewById(R.id.btnSend);
+        inputmsg = (EditText) findViewById(R.id.message);
+        send = (Button) findViewById(R.id.btn_send);
 
         SharedPreferences prefs = getSharedPreferences("Details", MODE_PRIVATE);
         final String sender = prefs.getString("myName", "");
@@ -103,7 +132,7 @@ public class Chatting extends AppCompatActivity {
 
 
                             // adding movie to movies array
-                            packList.add(pack);
+                            messageArrayList.add(pack);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
