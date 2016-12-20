@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.dellpc.skychat"
-        minSdkVersion 18
+        minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -27,6 +27,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:24.1.1'
     compile files('C:/Users/dell pc/AndroidStudioProjects/Skychat/libs/classes.jar')
     compile files('C:/Users/dell pc/AndroidStudioProjects/Skychat/libs/gradle-wrapper.jar')
-    compile 'com.gospelware.liquidbutton:liquidButtonLib:1.1.4'
-    compile files('C:/Users/dell pc/Documents/GitHub/Namaste/libs/volley.jar')
+    compile files('C:/Users/dell pc/Documents/GitHub/Skychat/libs/volley.jar')
+
 }
