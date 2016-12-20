@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dellpc.skychat" >
+    package="com.example.dellpc.skychat">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -10,10 +10,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,16 +22,14 @@
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/title_activity_register" >
-        </activity>
+            android:label="@string/title_activity_register"></activity>
         <activity
             android:name=".Profile"
-            android:label="@string/title_activity_profile" >
-        </activity>
+            android:label="@string/title_activity_profile"></activity>
         <activity
             android:name=".Chatting"
-            android:label="@string/title_activity_chatting" >
-        </activity>
+            android:label="@string/title_activity_chatting"></activity>
+        <activity android:name=".Lquid"></activity>
     </application>
 
 </manifest>

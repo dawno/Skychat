@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Skychat.iml" filepath="$PROJECT_DIR$/Skychat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Namaste.iml" filepath="$PROJECT_DIR$/Namaste.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liquidButtonLib/liquidButtonLib.iml" filepath="$PROJECT_DIR$/liquidButtonLib/liquidButtonLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucrop/ucrop.iml" filepath="$PROJECT_DIR$/ucrop/ucrop.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,8 @@
 package com.example.dellpc.skychat;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,9 +33,10 @@ public class MainActivity extends Activity {
     private Button btnLinkToRegister;
     private EditText inputEmail;
     private EditText inputPassword;
+    public static final String MyPREFERENCES = "Details" ;
     private ProgressDialog pDialog;
     private SessionManager session;
-
+    SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +57,7 @@ public class MainActivity extends Activity {
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
             // User is already logged in. Take him to main activity
-            Intent intent = new Intent(MainActivity.this, Profile.class);
+            Intent intent = new Intent(MainActivity.this, Lquid.class);
             startActivity(intent);
             finish();
         }
@@ -125,6 +128,11 @@ public class MainActivity extends Activity {
                         String name = user.getString("name");
                         String email = user.getString("email");
                         String contact_num = user.getString("contact_num");
+
+                        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        editor.putString("myName", name);
+                        editor.commit();
                       //  String created_at = user.getString("created_at");
 
                         // Inserting row in users table
